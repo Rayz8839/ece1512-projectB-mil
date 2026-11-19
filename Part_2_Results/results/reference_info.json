@@ -1,0 +1,25 @@
+{
+  "reference": "256x256 center crop of the original",
+  "native": {
+    "n_test": 1576,
+    "formats": {
+      "PNG": 1576
+    },
+    "distinct_sizes": 1,
+    "min_wh": [
+      272,
+      272
+    ],
+    "max_wh": [
+      272,
+      272
+    ],
+    "n_larger_than_crop": 1576,
+    "n_smaller_than_crop": 0,
+    "most_common_size": [
+      272,
+      272
+    ]
+  },
+  "bpp_note": "CNN BPP equals JPEG BPP: restoration is applied after JPEG decoding, bitstream unchanged"
+}

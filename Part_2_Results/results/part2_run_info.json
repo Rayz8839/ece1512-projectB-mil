@@ -1,0 +1,38 @@
+{
+  "part": "2",
+  "seed": 42,
+  "config": {
+    "epochs": 20,
+    "batch_size": 16,
+    "patch_size": 256,
+    "eval_patch_size": 256,
+    "channels": 32,
+    "depth": 5,
+    "lr": 0.0002,
+    "weight_decay": 0.0001,
+    "train_qualities": [
+      10,
+      20,
+      30,
+      40,
+      50
+    ],
+    "test_qualities": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "num_workers": 2,
+    "seed": 42,
+    "val_subset": 500
+  },
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "torch": "2.14.1+cu130",
+  "pillow": "11.3.0",
+  "data_root": "/content/data/data_1um_bicubic",
+  "jpeg_settings": "Pillow JPEG, RGB 4:4:4 (subsampling=0), optimize=False",
+  "best_checkpoint_epoch": 19
+}
