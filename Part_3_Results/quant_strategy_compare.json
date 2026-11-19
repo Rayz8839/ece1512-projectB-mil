@@ -1,0 +1,17 @@
+{
+  "straight-through": {
+    "hard_psnr": 32.44205856323242,
+    "hard_mse": 0.0007893587899161503,
+    "hard_rate": 1.8363087475299835,
+    "soft_path_psnr": 32.44205856323242,
+    "soft_path_rate": 1.8435445129871368
+  },
+  "fully soft": {
+    "hard_psnr": 31.868037700653076,
+    "hard_mse": 0.0009119854075834155,
+    "hard_rate": 1.8219528198242188,
+    "soft_path_psnr": 33.219685554504395,
+    "soft_path_rate": 1.8306766748428345,
+    "psnr_gap_soft_minus_hard": 1.3516478538513184
+  }
+}

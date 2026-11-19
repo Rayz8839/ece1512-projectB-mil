@@ -1,0 +1,67 @@
+{
+  "seed": 1512,
+  "mode": "larger",
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "torchmetrics": "1.9.0",
+  "gpu": "Tesla T4",
+  "data_root": "/content/data/data_1um_bicubic",
+  "split_rule": "predefined train/val/test directories (manifest in runs/shared_data_splits.json)",
+  "split_sizes_full": {
+    "train": 12616,
+    "val": 1576,
+    "test": 1576
+  },
+  "used_crops": {
+    "train": 1024,
+    "val": 128,
+    "test": 256
+  },
+  "data_config": {
+    "crop_size": 64,
+    "batch_size": 32
+  },
+  "limits": {
+    "train": 1024,
+    "val": 128,
+    "test": 256
+  },
+  "test_offset": 128,
+  "model_config": {
+    "width": 64,
+    "latent_dim": 16,
+    "levels": 1,
+    "codebook_size": 256,
+    "straight_through": true
+  },
+  "train_config": {
+    "epochs": 80,
+    "lr": 0.0002,
+    "rate_weight": 0.001,
+    "codebook_loss": {
+      "weight": 1.0,
+      "beta": 0.25
+    },
+    "temperature_start": 0.02934122271835804,
+    "temperature_end": 0.0058682445436716085
+  },
+  "objective": "MSE + w_cb*L_codebook + lambda*R_soft (L_LPIPS / L_GAN not used)",
+  "codebook_loss": {
+    "weight": 1.0,
+    "beta": 0.25
+  },
+  "entropy_model": "context-free learnable prior r=softmax(prior_logits); Eq. 7 with empty conditioning set; stored rate measured with zlib",
+  "warm_start": {
+    "enabled": true,
+    "epochs": 8,
+    "max_vectors": 32768
+  },
+  "codebook": {
+    "K": 256,
+    "dim": 16,
+    "bits_per_index": 8
+  },
+  "rate_accounting": "DNN bpp = compressed latent payload bytes*8/(H*W), header & checkpoint excluded; JPEG bpp = full file bytes (4:4:4, optimize=False)",
+  "index_decoding_check": "decompress(compress(x)) == model(x) reconstruction, max abs diff < 1e-4 on 32 test crops",
+  "run_dir": "/content/dnn_compression_notebook/runs/solution_larger_20261114_202511_529256"
+}

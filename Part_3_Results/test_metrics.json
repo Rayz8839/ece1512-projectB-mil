@@ -1,0 +1,8 @@
+{
+  "checkpoint": "/content/dnn_compression_notebook/runs/solution_larger_20261114_202511_529256/best.pt",
+  "mse": 0.0007389596139546484,
+  "psnr": 32.432000398635864,
+  "ssim": 0.9242111891508102,
+  "estimated_bpp": 1.8434928953647614,
+  "loss": 0.00258245250931941
+}
