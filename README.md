@@ -1,1 +1,0 @@
-# ece1512-projectB-mil
