@@ -1,0 +1,11 @@
+{
+  "epochs": 80,
+  "lr": 0.0002,
+  "rate_weight": 0.01,
+  "codebook_loss": {
+    "weight": 1.0,
+    "beta": 0.25
+  },
+  "temperature_start": 0.02934122271835804,
+  "temperature_end": 0.0058682445436716085
+}

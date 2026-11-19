@@ -1,0 +1,6 @@
+{
+  "device": "cuda",
+  "training_seconds": 426.28630036100003,
+  "parameter_count": 195987,
+  "peak_allocated_gpu_mib": 382.26416015625
+}

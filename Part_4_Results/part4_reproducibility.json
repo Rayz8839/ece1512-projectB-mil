@@ -1,0 +1,436 @@
+{
+  "part": "4",
+  "seed": 1512,
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "torchmetrics": "1.9.0",
+  "gpu": "Tesla T4",
+  "data_root": "/content/data/data_1um_bicubic",
+  "split_rule": "predefined train/val/test directories",
+  "manifest": "/content/dnn_compression_notebook/runs/shared_data_splits.json",
+  "split_sizes_full": {
+    "train": 12616,
+    "val": 1576,
+    "test": 1576
+  },
+  "training_crops": 1024,
+  "validation_crops": 128,
+  "limits": {
+    "train": 1024,
+    "val": 128,
+    "test": 256
+  },
+  "evaluation": {
+    "n_images": 100,
+    "test_offset": 128,
+    "selection": "shuffled test list [TEST_OFFSET: TEST_OFFSET+N_EVAL] (same source images as the Part 3 test slice)",
+    "native_sizes": {
+      "(272, 272)": 100
+    },
+    "file_formats": {
+      "PNG": 100
+    },
+    "crop": "256x256 center crop",
+    "train_crop": 64,
+    "images": [
+      "000311_126.png_crop_402.png",
+      "001096_161.png_crop_1467.png",
+      "000336_124_R01.png_crop_50.png",
+      "000406_167.png_crop_253.png",
+      "000116_171.png_crop_3183.png",
+      "000656_134_R02.png_crop_234.png",
+      "000287_P13_R03.png_crop_56.png",
+      "001539_P2.png_crop_3.png",
+      "000010_BY63_R02.png_crop_1337.png",
+      "001337_005.png_crop_2907.png",
+      "001371_143_R04.png_crop_192.png",
+      "000524_167.png_crop_487.png",
+      "000475_123_R01.png_crop_271.png",
+      "000876_023.png_crop_5435.png",
+      "000022_148_R01.png_crop_85.png",
+      "000782_126.png_crop_761.png",
+      "001137_120_R01.png_crop_111.png",
+      "001543_123_R02.png_crop_46.png",
+      "001159_138.png_crop_6.png",
+      "000196_148_R04.png_crop_42.png",
+      "001059_070.png_crop_220.png",
+      "000176_161.png_crop_1830.png",
+      "001173_P13_R02.png_crop_78.png",
+      "001483_134_R03.png_crop_134.png",
+      "000486_BC3.png_crop_2061.png",
+      "000465_134_R02.png_crop_94.png",
+      "000931_120_R01.png_crop_53.png",
+      "001258_134_R03.png_crop_149.png",
+      "000057_114.png_crop_253.png",
+      "000289_124_R02.png_crop_272.png",
+      "001557_009.png_crop_4924.png",
+      "000007_P11_R03.png_crop_143.png",
+      "000515_114.png_crop_27.png",
+      "000372_BC3.png_crop_4947.png",
+      "000707_025.png_crop_1776.png",
+      "000299_015.png_crop_1018.png",
+      "000759_070.png_crop_3537.png",
+      "000202_143_R03.png_crop_232.png",
+      "001261_023.png_crop_5807.png",
+      "000048_154.png_crop_230.png",
+      "000403_BC38_R01.png_crop_451.png",
+      "001417_BC1.png_crop_190.png",
+      "000936_PP2.png_crop_1263.png",
+      "001394_149.png_crop_166.png",
+      "000974_115.png_crop_14.png",
+      "000642_070.png_crop_878.png",
+      "000534_BC38_R05.png_crop_738.png",
+      "000933_009.png_crop_3149.png",
+      "000065_BY73.png_crop_353.png",
+      "000776_P11_R03.png_crop_231.png",
+      "000203_115.png_crop_112.png",
+      "000041_148_R05.png_crop_72.png",
+      "000586_165_R01.png_crop_61.png",
+      "000339_BC38_R01.png_crop_693.png",
+      "001228_BC38_R05.png_crop_413.png",
+      "000816_59.png_crop_1422.png",
+      "001253_092.png_crop_83.png",
+      "001496_BY73.png_crop_34.png",
+      "001022_P11_R02.png_crop_176.png",
+      "001513_P11_R01.png_crop_1.png",
+      "001536_P11_R04.png_crop_18.png",
+      "001345_148_R01.png_crop_113.png",
+      "000984_BC10_R01.png_crop_40.png",
+      "000905_149.png_crop_874.png",
+      "000439_126.png_crop_71.png",
+      "000129_BY73.png_crop_357.png",
+      "001453_123_R02.png_crop_203.png",
+      "000632_BC38_R04.png_crop_629.png",
+      "001414_BC38_R01.png_crop_256.png",
+      "001285_59.png_crop_1732.png",
+      "001024_133_R03.png_crop_110.png",
+      "000833_BC38_R05.png_crop_473.png",
+      "001004_BC10_R01.png_crop_23.png",
+      "000649_BY63_R01.png_crop_880.png",
+      "000623_143_R03.png_crop_185.png",
+      "000935_124_R02.png_crop_116.png",
+      "001241_120_R01.png_crop_258.png",
+      "000192_015.png_crop_2102.png",
+      "000261_154.png_crop_199.png",
+      "001007_P32.png_crop_50.png",
+      "001317_167.png_crop_316.png",
+      "000668_P32.png_crop_55.png",
+      "001467_BC38_R02.png_crop_559.png",
+      "000848_119_R01.png_crop_23.png",
+      "000398_069.png_crop_2541.png",
+      "001209_161.png_crop_238.png",
+      "001006_146_R04.png_crop_36.png",
+      "001075_BY73.png_crop_313.png",
+      "000239_PP61.png_crop_2692.png",
+      "000769_123_R02.png_crop_179.png",
+      "001138_P33_R02.png_crop_62.png",
+      "001020_BC10_R01.png_crop_212.png",
+      "000248_BC38_R01.png_crop_96.png",
+      "000786_BY73.png_crop_107.png",
+      "001003_114.png_crop_184.png",
+      "000969_148_R06.png_crop_113.png",
+      "001393_BC38_R01.png_crop_706.png",
+      "000618_P11_R04.png_crop_59.png",
+      "000400_BC38_R01.png_crop_715.png",
+      "000090_154.png_crop_420.png"
+    ]
+  },
+  "jpeg_settings": {
+    "library": "Pillow 11.3.0",
+    "subsampling": "4:4:4",
+    "optimize": false,
+    "qualities": [
+      1,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50,
+      60,
+      70,
+      80,
+      90,
+      95
+    ],
+    "rates": "file bpp = 8*file bytes/(H*W); scan bpp = entropy-coded scan only"
+  },
+  "model_config": {
+    "width": 64,
+    "latent_dim": 16,
+    "levels": 1,
+    "codebook_size": 256,
+    "straight_through": true
+  },
+  "train_config": {
+    "epochs": 80,
+    "lr": 0.0002,
+    "rate_weight": 0.001,
+    "codebook_loss": {
+      "weight": 1.0,
+      "beta": 0.25
+    },
+    "temperature_start": 0.05,
+    "temperature_end": 0.01
+  },
+  "codebook_loss": {
+    "weight": 1.0,
+    "beta": 0.25
+  },
+  "warm_start": {
+    "enabled": true,
+    "epochs": 8,
+    "max_vectors": 32768
+  },
+  "variants": {
+    "main (K=256, lambda=1e-3, straight-through)": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": true
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 77,
+      "train_minutes": 7.200375270843506,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_main_K_256_lambda_1e_3_straight_through_20261114_212026_775791"
+    },
+    "lambda=0.0001": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": true
+      },
+      "rate_weight": 0.0001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 78,
+      "train_minutes": 7.094525357087453,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_lambda_0_0001_20261114_213005_695574"
+    },
+    "lambda=0.01": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": true
+      },
+      "rate_weight": 0.01,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 80,
+      "train_minutes": 7.10684745311737,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_lambda_0_01_20261114_213830_243605"
+    },
+    "lambda=0.1": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": true
+      },
+      "rate_weight": 0.1,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 80,
+      "train_minutes": 7.104979085922241,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_lambda_0_1_20261114_214653_079659"
+    },
+    "K=64": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 64,
+        "straight_through": true
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 64,
+        "dim": 16,
+        "bits_per_index": 6
+      },
+      "best_epoch": 76,
+      "train_minutes": 6.874961431821188,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_K_64_20261114_215517_970685"
+    },
+    "K=128": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 128,
+        "straight_through": true
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 128,
+        "dim": 16,
+        "bits_per_index": 7
+      },
+      "best_epoch": 80,
+      "train_minutes": 6.900995802879334,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_K_128_20261114_220324_934401"
+    },
+    "K=512": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 512,
+        "straight_through": true
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 512,
+        "dim": 16,
+        "bits_per_index": 9
+      },
+      "best_epoch": 78,
+      "train_minutes": 7.273003979523977,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_K_512_20261114_221135_096154"
+    },
+    "fully soft (straight_through=False)": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": false
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "soft",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 76,
+      "train_minutes": 7.074601968129476,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_fully_soft_straight_through_False_20261114_222018_961868"
+    },
+    "no relaxation (hard-index rate)": {
+      "model_cfg": {
+        "width": 64,
+        "latent_dim": 16,
+        "levels": 1,
+        "codebook_size": 256,
+        "straight_through": true
+      },
+      "rate_weight": 0.001,
+      "rate_loss": "hard_rate",
+      "codebook": {
+        "K": 256,
+        "dim": 16,
+        "bits_per_index": 8
+      },
+      "best_epoch": 78,
+      "train_minutes": 7.079874022801717,
+      "run_dir": "/content/dnn_compression_notebook/runs/p4_no_relaxation_hard_index_rate_20261114_222840_120425"
+    }
+  },
+  "rate_accounting": {
+    "dnn_payload": "8*compressed latent payload bytes/(H*W)",
+    "dnn_file": "8*len(bitstream)/(H*W) incl. header",
+    "jpeg_file": "8*complete .jpg bytes/(H*W)",
+    "jpeg_scan": "8*entropy-coded scan bytes/(H*W)",
+    "excluded": "shared checkpoint (network, codebook, context tables)",
+    "estimated_bpp": "training proxy only, never reported as a measured size",
+    "coder_rule": "smallest of zlib / arithmetic-left / arithmetic-up per image; context tables fitted on training crops only"
+  },
+  "index_decoding_checks": {
+    "per_variant": {
+      "main (K=256, lambda=1e-3, straight-through)": {
+        "images_decoded_from_bytes": 100,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "lambda=0.0001": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "lambda=0.01": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "lambda=0.1": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "K=64": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "K=128": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "K=512": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "fully soft (straight_through=False)": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      },
+      "no relaxation (hard-index rate)": {
+        "images_decoded_from_bytes": 8,
+        "max_abs_decoded_minus_model": 0.0
+      }
+    },
+    "arithmetic_roundtrip": {
+      "streams": 12,
+      "all_exact": true
+    },
+    "criterion": "decompress(compress(x)) equals the model reconstruction, max abs diff < 1e-4"
+  },
+  "equal_rate_comparison_main": [
+    {
+      "comparison": "DNN payload vs JPEG scan-only (no headers)",
+      "dnn_bpp": 1.0347351074,
+      "dnn_psnr": 32.2598241806,
+      "jpeg_psnr_at_that_bpp": 30.2934421647,
+      "delta_psnr": 1.9663820159,
+      "dnn_ssim": 0.9275797731,
+      "jpeg_ssim_at_that_bpp": 0.8679370876,
+      "delta_ssim": 0.0596426854
+    },
+    {
+      "comparison": "DNN whole bitstream vs JPEG whole file (headers on both)",
+      "dnn_bpp": 1.0547314453,
+      "dnn_psnr": 32.2598241806,
+      "jpeg_psnr_at_that_bpp": 29.9953770475,
+      "delta_psnr": 2.2644471331,
+      "dnn_ssim": 0.9275797731,
+      "jpeg_ssim_at_that_bpp": 0.8615720441,
+      "delta_ssim": 0.066007729
+    }
+  ]
+}
